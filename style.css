@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: #c9a236;
+  color: #fff;
+  padding: 10px;
+}
+
+.container .main-heading {
+  font-size: 2.5rem;
+  margin-top: 1%;
+  text-align: center;
+  animation: lights 5s 750ms linear infinite;
+}
+
+.calculator {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 11%;
+}
+
+.calculator h2 {
+  font-size: 30px;
+  padding-left: 1%;
+  display: flex;
+  justify-content: start;
+}
+
+.calculator h2 span {
+  color: #ffff76;
+  padding-left: 2%;
+}
+
+.input-box {
+  margin-top: 1%;
+  padding: 35px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+}
+
+.input-box input {
+  flex: 1;
+  margin-right: 20px;
+  padding: 14px 20px;
+  border: 0;
+  outline: 0;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.calculator button {
+  background: #ffff76;
+  border: 0;
+  outline: 0;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-weight: 500;
+  color: #333;
+  margin-top: 1%;
+  cursor: pointer;
+}
+
+.reset {
+  background-color: #ff7675;
+  border: 0;
+  outline: 0;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-weight: 500;
+  color: #fff;
+  margin-top: 1%;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.reset:hover {
+  background-color: #ff4c4c;
+}
+
+#result {
+  font-size: 20px;
+  gap: 40px;
+  padding-left: 5%;
+}
+
+#result span {
+  color: #ffff76;
+}
+
+@keyframes lights {
+  0% {
+    color: hsl(230, 40%, 80%);
+    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.2),
+      0 0 0.125em hsla(320, 100%, 60%, 0.3),
+      -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+  30% {
+    color: hsl(230, 80%, 90%);
+    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 60%, 0.5),
+      -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+      0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+  }
+  40% {
+    color: hsl(230, 100%, 95%);
+    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 90%, 0.5),
+      -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+      0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+  }
+  70% {
+    color: hsl(230, 80%, 90%);
+    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 60%, 0.5),
+      0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+      -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+  }
+  100% {
+    color: hsl(230, 40%, 80%);
+    text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.2),
+      0 0 0.125em hsla(320, 100%, 60%, 0.3),
+      1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+}
+
+.dark-mode-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  background-color: #ff7bf8;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #333;
+    color: #fff;
+  }
+}
+
+.dark-mode-toggle i {
+  font-size: 24px;
+  color: #333;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.dark-mode .container {
+  background: #0a0a0a;
+  color: #fff;
+}
+
+.dark-mode .main-heading {
+  color: #ffcc00;
+}
+
+.dark-mode .calculator button {
+  background: #ffcc00;
+  color: #000;
+}
+
+.dark-mode .reset {
+  background-color: #ff5050;
+}
+
+.dark-mode #result span {
+  color: #ffcc00;
+}
+
+@media (max-width: 600px) {
+
+  .container {
+    padding: 5px;
+  }
+
+  .container .main-heading{
+    font-size: 20px;
+  }
+
+  .calculator{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    margin-left: 1;
+    margin-top: 20%;
+    margin-bottom: 50%;
+  }
+
+  .calculator h2 {
+    font-size: 25px;
+  }
+
+  .input-box {
+    padding: 20px;
+  }
+
+  .calculator button,
+  .reset {
+    align-items: center;
+    padding: 10px 20px 10px 0px;
+    margin: 20px 10px 0px 10px;
+    font-size: 14px;
+  }
+}

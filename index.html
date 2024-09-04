@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logo.png" type="image/png">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>Age Calculator</title>
+</head>
+<body>
+  <div class="container">
+    <h1 class="main-heading">Muhammad Samad</h1>
+    <div class="calculator">
+      <h2>Javascript<br /><span>Age Calculator</span></h2>
+      <div class="input-box">
+        <input type="date" id="date" />
+        <p id="result"></p>
+      </div>
+      <button onclick="calculateAge()">Calculate</button>
+      <input type="reset" class="reset" value="Reset" onclick="resetFields()">
+    </div>
+    <div class="dark-mode-toggle" id="dark-mode-toggle">
+      <i class="bx bx-moon"></i>
+    </div>
+  </div>
+
+<script src="script.js"></script></body>
+</html>
